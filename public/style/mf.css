@@ -1,0 +1,120 @@
+/*	::::::::mike fortuna portfolio v2.1::::::::::::::: 
+	author ninjamike, ninjastack 
+	::::::::::::::2013:::::::::::::
+*/
+
+.bg1, .bg2, .bg3, .bg4, .bg5 { 
+	-o-transition:color .2s ease-out, background 1s ease-in;
+  -ms-transition:color .2s ease-out, background 1s ease-in;
+  -moz-transition:color .2s ease-out, background 1s ease-in;
+  -webkit-transition:color .2s ease-out, background 1s ease-in;
+  /* ...and now override with proper CSS property */
+  transition:color .2s ease-out, background 1s ease-in;  }
+
+.bg1 { background-color:#c52727; height:100%; width:100%; position:fixed; left:0; }
+.bg2 { background-color:#5fbaf3; height:100%; width:100%; position:fixed; left:0; }
+.bg3 { background-color:#f3a85f; height:100%; width:100%; position:fixed; left:0; }
+.bg4 { background-color:#f1f35f; height:100%; width:100%; position:fixed; left:0; }
+.bg5 { background-color:#aff35f; height:100%; width:100%; position:fixed; left:0; }
+
+h1, h2, h3, h4, h5, p { font-weight:normal; font-family: Helvetica, serif; }
+h2 { font-size:50px; line-height:60px; }
+p { font-size:28px; line-height:36px; font-family:Helvetica, serif;}
+a { font-family:Helvetica, serif; }
+.bg1 h2, .bg1 p, .bg2 h2, .bg2 p, .bg3 h2, .bg3 p { color:#fff; }
+.bg4 h2, .bg4 p, .bg4 h2, .bg4 p { color:#000; }
+
+.contain { margin: 230px 0px 10px 100px; width: 82%; }
+.contain img { border:8px solid #fff; cursor:pointer;
+-webkit-transition: all 3s ease;
+  -moz-transition: all 3s ease;
+  -ms-transition: all 3s ease;
+  -o-transition: all 3s ease;
+  transition: all 3s ease;}
+.contain img:hover { opacity:0.5;}
+.next { background:#fff; color:#000; font-size:50px; padding:50px; text-align:center;}
+.row-fluid { margin-bottom:10px;}
+.next.normal {
+position: absolute;
+left: 50%;
+bottom: 32%;
+}
+.next.redpill {
+background-color:#f35f5f;
+position: absolute;
+left: 40%;
+bottom: 32%;
+}
+.next.redpill:hover { color:#ffa9a9;}
+.next.bluepill:hover { color:#a9d3ff;}
+.next.bluepill {
+	background-color:#5facf3;
+position: absolute;
+left: 5%;
+bottom: 32%;
+}
+
+.next.great { position:absolute; right:10%; bottom:25%; background-color:transparent; }
+.next.great img { border:none !important; }
+.modal-title { font-size:25px;}
+.modal-body { max-height:100%; text-align:center;}
+
+.modal.fade.in { top:2150px; }
+.modal {
+position: absolute;
+left: 45%;
+z-index: 9999999;
+width: 51%;
+margin-left: -280px;
+background-color: #ffffff;
+border: 1px solid #999;
+border: 1px solid rgba(0, 0, 0, 0.3);
+-webkit-border-radius: 6px;
+-moz-border-radius: 6px;
+border-radius: 6px;
+-webkit-box-shadow: 0 3px 7px rgba(0, 0, 0, 0.3);
+-moz-box-shadow: 0 3px 7px rgba(0, 0, 0, 0.3);
+box-shadow: 0 3px 7px rgba(0, 0, 0, 0.3);
+-webkit-background-clip: padding-box;
+-moz-background-clip: padding-box;
+background-clip: padding-box;
+outline: none;
+}
+.header { background: transparent; position: fixed; top: 10px; z-index: 9999; width: 100%; }
+.home-logo { background:url(/img/logo.png); height:40px; width:82px; margin:0 40px;}
+
+.story { height: 990px; padding: 0; margin: 0; width: 100%; max-width: 1920px; position: relative; margin: 0 auto; border-top: 1px solid rgba(255,255,255,0.3); border-bottom: 1px solid rgba(0,0,0,0.4); box-shadow: 0 0 50px rgba(0,0,0,0.8);}
+
+#first { background: #5fbaf3  no-repeat fixed; }
+#second { background: #aff35f no-repeat fixed; }
+#fourth { background: #f3a85f no-repeat fixed; }
+#third { background: #c52727 no-repeat fixed; }
+#theend { background: #27b4c5 bottom no-repeat fixed; }
+
+/* Introduction */
+#first .smashinglogo { background: url(/images/smashing-logo.png) 50% 100px no-repeat fixed; min-height: 1000px; padding: 0; margin: 0; width: 100%; max-width: 1920px; position: relative; margin: 0 auto; }
+#first article { width: 100%; top: 300px; position: absolute; text-align: center; }
+#first article p,
+#first article a { color: #ccc; }
+#first article a { text-decoration: underline; }
+#first article a:hover { color: #fff; }
+
+/* Background Only */
+#second { padding: 50px 0;}
+#second article { background: url(/images/grain.png) repeat #333; color: #fff; width: 445px; margin-left: 100px; padding: 10px 20px; text-shadow: 0 -1px 0 rgba(0,0,0,0.5); line-height: 1.5em; box-shadow: 0 0 25px rgba(0,0,0,0.3); border: 1px solid rgba(150,150,150,0.1); }
+#second article p { margin-bottom: 25px; }
+#second article a { color: #ff0;}
+
+/* Photograph */
+#third article {  background: url(/images/grain.png) repeat #333; color: #fff; padding: 10px 20px; margin: 100px 0 0 60%; text-shadow: 0 -1px 0 rgba(0,0,0,0.5); line-height: 1.5em; color: #fff; position: absolute; top: 0; box-shadow: 0 0 25px rgba(0,0,0,0.3); border: 1px solid rgba(150,150,150,0.1); }
+#third .photograph { background: url(/images/photo.png) transparent 40% 100px no-repeat fixed; min-height: 1000px; padding: 0; margin: 0; width: 100%; max-width: 1920px; position: relative; margin: 0 auto; }
+#third .photograph2 { background: url(/images/photo.png) transparent 40% 100px no-repeat fixed; min-height: 1000px; padding: 0; margin: 0; width: 100%; max-width: 1920px; position: relative; margin: 0 auto; }
+#third article p { width: 300px; margin-bottom: 25px; }
+
+/* HTML5 Video */
+#fourth article {  margin-left: 10%; text-shadow: 0 -1px 0 rgba(0,0,0,0.5); line-height: 1.5em; color: #fff; position: absolute; top: 0; }
+#fourth article p { width: 300px; margin: 50px 0; }
+#fourth video { position: fixed; left: 50%; box-shadow: 0 0 25px rgba(0,0,0,0.7); z-index: 1;}
+
+/* The End */
+#theend .byebye { background: url(/images/theend.png) 40% 100px no-repeat fixed; height: 1000px; padding: 0; margin: 0; width: 100%; max-width: 1920px; position: relative; margin: 0 auto; }
