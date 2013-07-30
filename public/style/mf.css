@@ -32,7 +32,7 @@ a { font-family:Helvetica, serif; }
   -o-transition: all 3s ease;
   transition: all 3s ease;}
 .contain img:hover { opacity:0.5;}
-.next { background:#fff; color:#000; font-size:50px; padding:50px; text-align:center;}
+.next { line-height:50px; background:#fff; color:#000; font-size:50px; padding:50px; text-align:center;}
 .row-fluid { margin-bottom:10px;}
 .next.normal {
 position: absolute;
@@ -41,17 +41,12 @@ bottom: 32%;
 }
 .next.redpill {
 background-color:#f35f5f;
-position: absolute;
-left: 40%;
-bottom: 32%;
+
 }
 .next.redpill:hover { color:#ffa9a9;}
 .next.bluepill:hover { color:#a9d3ff;}
 .next.bluepill {
 	background-color:#5facf3;
-position: absolute;
-left: 5%;
-bottom: 32%;
 }
 
 .next.great { position:absolute; right:10%; bottom:25%; background-color:transparent; }
@@ -82,14 +77,15 @@ outline: none;
 }
 .header { background: transparent; position: fixed; top: 10px; z-index: 9999; width: 100%; }
 .home-logo { background:url(/img/logo.png); height:40px; width:82px; margin:0 40px;}
-
-.story { height: 990px; padding: 0; margin: 0; width: 100%; max-width: 1920px; position: relative; margin: 0 auto; border-top: 1px solid rgba(255,255,255,0.3); border-bottom: 1px solid rgba(0,0,0,0.4); box-shadow: 0 0 50px rgba(0,0,0,0.8);}
+.header .email { color:#000; font-size:20px; margin:12px 5px;}
+.header .email:hover { color:#fff; }
+.story { height: 990px; padding: 0; margin: 0; width: 100%; max-width: 1920px; position: relative; margin: 0 auto; border-top: 1px solid rgba(255,255,255,0.3); border-bottom: 1px solid rgba(0,0,0,0.4); }
 
 #first { background: #5fbaf3  no-repeat fixed; }
-#second { background: #aff35f no-repeat fixed; }
-#fourth { background: #f3a85f no-repeat fixed; }
-#third { background: #c52727 no-repeat fixed; }
-#theend { background: #27b4c5 bottom no-repeat fixed; }
+#second { background: #aff35f no-repeat fixed;  }
+#fourth { background: #f3a85f no-repeat fixed;  }
+#third { background: #c52727 no-repeat fixed;  }
+#theend { background: #27b4c5 bottom no-repeat fixed;  }
 
 /* Introduction */
 #first .smashinglogo { background: url(/images/smashing-logo.png) 50% 100px no-repeat fixed; min-height: 1000px; padding: 0; margin: 0; width: 100%; max-width: 1920px; position: relative; margin: 0 auto; }
@@ -100,7 +96,7 @@ outline: none;
 #first article a:hover { color: #fff; }
 
 /* Background Only */
-#second { padding: 50px 0;}
+#second { padding: 10px 0;}
 #second article { background: url(/images/grain.png) repeat #333; color: #fff; width: 445px; margin-left: 100px; padding: 10px 20px; text-shadow: 0 -1px 0 rgba(0,0,0,0.5); line-height: 1.5em; box-shadow: 0 0 25px rgba(0,0,0,0.3); border: 1px solid rgba(150,150,150,0.1); }
 #second article p { margin-bottom: 25px; }
 #second article a { color: #ff0;}
