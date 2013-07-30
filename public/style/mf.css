@@ -40,12 +40,92 @@ left: 50%;
 bottom: 32%;
 }
 .next.redpill {
+	border-radius:0px;
 background-color:#f35f5f;
 
 }
-.next.redpill:hover { color:#ffa9a9;}
-.next.bluepill:hover { color:#a9d3ff;}
+.next.bunny:focus, .next.bunny:active { 
+	  -webkit-animation-name: spin;
+    -webkit-animation-duration: 200ms;
+    -webkit-animation-iteration-count: 1;
+    -webkit-animation-timing-function: linear;
+    -moz-animation-name: spin;
+    -moz-animation-duration: 200ms;
+    -moz-animation-iteration-count: 1;
+    -moz-animation-timing-function: linear;
+    -ms-animation-name: spin;
+    -ms-animation-duration: 200ms;
+    -ms-animation-iteration-count: 1;
+    -ms-animation-timing-function: linear;
+    
+    animation-name: spin;
+    animation-duration: 200ms;
+    animation-iteration-count: 1;
+    animation-timing-function: linear;
+}
+@-ms-keyframes spin {
+    from { -ms-transform: rotate(0deg); }
+    to { -ms-transform: rotate(160deg); }
+}
+@-moz-keyframes spin {
+    from { -moz-transform: rotate(0deg); }
+    to { -moz-transform: rotate(160deg); }
+}
+@-webkit-keyframes spin {
+    from { -webkit-transform: rotate(0deg); }
+    to { -webkit-transform: rotate(160deg); }
+}
+@keyframes spin {
+    from {
+        transform:rotate(0deg);
+    }
+    to {
+        transform:rotate(160deg);
+    }
+}
+.next.bunny:hover { 
+  -webkit-animation-name: spin;
+    -webkit-animation-duration: 200ms;
+    -webkit-animation-iteration-count: 1;
+    -webkit-animation-timing-function: linear;
+    -moz-animation-name: spin;
+    -moz-animation-duration: 200ms;
+    -moz-animation-iteration-count: 1;
+    -moz-animation-timing-function: linear;
+    -ms-animation-name: spin;
+    -ms-animation-duration: 200ms;
+    -ms-animation-iteration-count: 1;
+    -ms-animation-timing-function: linear;
+    
+    animation-name: spin;
+    animation-duration: 200ms;
+    animation-iteration-count: 1;
+    animation-timing-function: linear;
+}
+@-ms-keyframes spin {
+    from { -ms-transform: rotate(0deg); }
+    to { -ms-transform: rotate(160deg); }
+}
+@-moz-keyframes spin {
+    from { -moz-transform: rotate(0deg); }
+    to { -moz-transform: rotate(160deg); }
+}
+@-webkit-keyframes spin {
+    from { -webkit-transform: rotate(0deg); }
+    to { -webkit-transform: rotate(160deg); }
+}
+@keyframes spin {
+    from {
+        transform:rotate(0deg);
+    }
+    to {
+        transform:rotate(160deg);
+    }
+}
+.next.redpill:hover { color:#ffa9a9; border-radius:80px;}
+.next.bluepill:hover { color:#a9d3ff; border-radius:80px;}
 .next.bluepill {
+	border-radius:0px;
 	background-color:#5facf3;
 }
 
@@ -113,4 +193,5 @@ outline: none;
 #fourth video { position: fixed; left: 50%; box-shadow: 0 0 25px rgba(0,0,0,0.7); z-index: 1;}
 
 /* The End */
-#theend .byebye { background: url(/images/theend.png) 40% 100px no-repeat fixed; height: 1000px; padding: 0; margin: 0; width: 100%; max-width: 1920px; position: relative; margin: 0 auto; }
+#theend .byebye { opacity:0.7; background: url(/images/theend.png) 40% 100px no-repeat fixed; height: 1000px; padding: 0; margin: 0; width: 100%; max-width: 1920px; position: relative; margin: 0 auto; }
+#theend .byebye:hover { opacity:1; }
