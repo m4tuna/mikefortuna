@@ -18,7 +18,7 @@ var express = require('express'),
 	controls = require(__dirname+'/lib/controls')(models),
 	route = require(__dirname+'/lib/route'),
 
-	mongourl = process.env['MONGOHQ_URL'] ||  'mongodb://localhost/app17223430',
+	mongourl = process.env['MONGOHQ_URL'] ||  'mongodb://localhost/mikefortuna',
 
 	app = module.exports = express();
 
