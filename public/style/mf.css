@@ -140,7 +140,7 @@ background-color:#f35f5f;
 .modal-title { font-size:25px;}
 .modal-body { max-height:100%; text-align:center;}
 
-.modal.fade.in { top:2150px; }
+.modal.fade.in { top:2080px; }
 .modal {
 position: absolute;
 left: 45%;
