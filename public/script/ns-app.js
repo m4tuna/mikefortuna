@@ -11,11 +11,6 @@ angular
 	function($routeProvider) {
 		$routeProvider
 			.when('/', { templateUrl: '/views/home.html', controller: 'HomeCtrl' })
-			.when('/1', { templateUrl: '/views/home.html', controller: 'HomeCtrl' })
-			.when('/2', { templateUrl: '/views/2.html', controller: 'HomeCtrl' })
-			.when('/3', { templateUrl: '/views/3.html', controller: 'HomeCtrl' })
-			.when('/4', { templateUrl: '/views/4.html', controller: 'HomeCtrl' })
-			.when('/5', { templateUrl: '/views/5.html', controller: 'HomeCtrl' })
 			.otherwise('/404', { templateUrl: '/views/404.html', controller: 'DefaultCtrl' });
 	}
 ]).controller('TopCtrl',[ '$scope', '$rootScope', 'AppState',
