@@ -139,6 +139,7 @@ background-color:#f35f5f;
 .next.great img { border:none !important; }
 .modal-title { font-size:25px;}
 .modal-body { max-height:100%; text-align:center;}
+.modal img { margin-bottom:10px;}
 
 .modal.fade.in { top:2080px; }
 .modal {
