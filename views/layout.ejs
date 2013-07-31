@@ -26,6 +26,7 @@
 		<div class="contain">
 			<h2><i class="icon-male"></i> Hi, I'm Mike</h2>	
 			<p>I'm a web <span id="rotate">designer</span></p>
+			<img class="main-pic pull-right" src="/img/me.jpg"> 
 			<a class="next normal span5" href="#second">begin to believe</a>
 		</div>
 	</section>
@@ -202,7 +203,7 @@
 		$("html:not(:animated),body:not(:animated)").animate({ scrollTop: destination-15}, 500 );
 		return false;
 	});
-	var terms = ["designer", "developer", "coder", "entrepreneur", "application maker", "pioneer", "carpenter", "assembler", "facilitator", "genius", "ninja"];
+	var terms = ["designer", "developer", "coder", "entrepreneur", "application maker", "pioneer", "architect", "carpenter", "assembler", "facilitator", "genius", "ninja"];
 
 	function rotateTerm() {
 		var ct = $("#rotate").data("term") || 0;

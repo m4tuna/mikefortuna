@@ -134,7 +134,7 @@ background-color:#f35f5f;
 	border-radius:0px;
 	background-color:#5facf3;
 }
-
+.main-pic { border-radius:30px; height:300px; margin:-200px 0 -40px 0; }
 .next.great { box-shadow:none; position:absolute; right:10%; bottom:25%; background-color:transparent; }
 .next.great img { border:none !important; }
 .modal-title { font-size:25px;}

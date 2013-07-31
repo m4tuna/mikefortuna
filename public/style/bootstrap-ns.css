@@ -50,6 +50,14 @@ article {
     body { padding-left:0;}
     .next.normal { position: absolute; left: 11% !important; bottom: 32%; }
     .contain { margin: 230px 0px 10px 50px !important; width: 72% !important; }
+    .main-pic {
+        border-radius: 30px;
+        height: 90px !important;
+        position: relative;
+        bottom: 50px;
+        border: 4px solid #fff !important;
+        right: 20%;
+    }
   
 
  }
@@ -57,11 +65,17 @@ article {
 /* Landscape phones and down */
 @media (max-width: 480px) {
     .modal.fade.in {
-top: 2310px !important;
-left: 90% !important;
-}
- }
-
+        top: 2310px !important;
+        left: 90% !important;
+    }
+    .main-pic {
+        border-radius: 30px;
+        height: 90px !important;
+        position: relative;
+        bottom: 100px;
+        border: 4px solid #fff !important;
+        right: 10%;
+    }
 /***********NINJA***************/
 
 .ninja { display:none !important; }
