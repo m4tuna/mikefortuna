@@ -139,8 +139,9 @@ background-color:#f35f5f;
 .next.great img { border:none !important; }
 .modal-title { font-size:25px;}
 .modal-body { max-height:100%; text-align:center;}
-.modal img { margin-bottom:10px;}
-
+.modal img { margin-bottom:10 px;}
+.popover { border-radius:0px;}
+.popover-title { background:#fff;}
 .modal.fade.in { top:2080px; }
 .modal {
 position: absolute;
@@ -153,7 +154,7 @@ border: 1px solid #999;
 border: 1px solid rgba(0, 0, 0, 0.3);
 -webkit-border-radius: 6px;
 -moz-border-radius: 6px;
-border-radius: 6px;
+border-radius: 0px;
 -webkit-box-shadow: 0 3px 7px rgba(0, 0, 0, 0.3);
 -moz-box-shadow: 0 3px 7px rgba(0, 0, 0, 0.3);
 box-shadow: 0 3px 7px rgba(0, 0, 0, 0.3);
