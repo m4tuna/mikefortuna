@@ -58,6 +58,8 @@ article {
         border: 4px solid #fff !important;
         right: 20%;
     }
+    #first .story { height:800px !important; }
+    #second .story { height:auto !important; }
   
 
  }
@@ -68,6 +70,9 @@ article {
         top: 2310px !important;
         left: 90% !important;
     }
+    #first .story { height:800px !important; }
+    #second .story { height:auto !important; }
+
     .main-pic {
         border-radius: 30px;
         height: 90px !important;
