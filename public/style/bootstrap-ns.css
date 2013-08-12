@@ -67,6 +67,7 @@ article {
     .next { padding: 20px !important;}
     .next.great { left: 30%; }
     #third.story { height:1880px !important;}
+    /*#first.story { height:640px !important;}*/
     .next.great { text-align:center; position:relative !important;}
     #theend .byebye { height:630px !important; }
 
