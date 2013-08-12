@@ -48,8 +48,11 @@ article {
 @media (max-width: 767px) { 
 
     body { padding-left:0;}
+    h2 { font-size:40px !important; }
+    p { font-size: 19px !important; line-height: 25px !important; }
     .next.normal { position: absolute; left: 11% !important; bottom: 32%; }
-    .contain { margin: 230px 0px 10px 50px !important; width: 72% !important; }
+    .contain img.me { display:none;}
+    .contain { margin: 100px 0px 0px 60px !important; width: 82% !important; }
     .main-pic {
         border-radius: 30px;
         height: 90px !important;
@@ -60,7 +63,12 @@ article {
     }
     #first .story { height:800px !important; }
     #second .story { height:auto !important; }
-  
+    .next.normal { bottom:58% !important;}
+    .next { padding: 20px !important;}
+    .next.great { left: 30%; }
+    #third.story { height:1880px !important;}
+    .next.great { text-align:center; position:relative !important;}
+    #theend .byebye { height:630px !important; }
 
  }
  
@@ -81,6 +89,9 @@ article {
         border: 4px solid #fff !important;
         right: 10%;
     }
+    .next.normal { bottom:58% !important; left:0% !important;}
+    .next { padding: 20px !important;}
+}
 /***********NINJA***************/
 
 .ninja { display:none !important; }
