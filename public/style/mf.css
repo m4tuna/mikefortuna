@@ -37,7 +37,7 @@ a { font-family:Helvetica, serif; }
   transition: all 3s ease;}
 .contain img:hover { opacity:0.5;}
 
-.next { box-shadow:1px 1px 1px rgba(104, 104, 104, 0.65); line-height:50px; background:#fff; color:#000; font-size:50px; padding:50px; text-align:center;}
+.next { box-shadow:1px 1px 1px rgba(104, 104, 104, 0.65); line-height:40px; background:#fff; color:#000; font-size:30px; padding:30px; text-align:center;}
 .row-fluid { margin-bottom:10px;}
 .next.normal {
 position: absolute;
@@ -142,7 +142,7 @@ background-color:#f35f5f;
 .modal img { margin-bottom:10 px;}
 .popover { border-radius:0px;}
 .popover-title { background:#fff;}
-.modal.fade.in { top:2080px; }
+.modal.fade.in { top:2080px; max-height:700px; overflow-x:auto; }
 .modal {
 position: absolute;
 left: 45%;

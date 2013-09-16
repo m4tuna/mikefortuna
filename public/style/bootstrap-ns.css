@@ -50,7 +50,7 @@ article {
     body { padding-left:0;}
     h2 { font-size:40px !important; }
     p { font-size: 19px !important; line-height: 25px !important; }
-    .next.normal { position: absolute; left: 11% !important; bottom: 32%; }
+    .next.normal { position: absolute; left: 5% !important; bottom: 32%; }
     .contain img.me { display:none;}
     .contain { margin: 100px 0px 0px 60px !important; width: 82% !important; }
     .main-pic {
@@ -70,6 +70,7 @@ article {
     /*#first.story { height:640px !important;}*/
     .next.great { text-align:center; position:relative !important;}
     #theend .byebye { height:630px !important; }
+    .modal.fade.in { position:fixed; top: 20% !important; left:450px !important ; }
 
  }
  

@@ -12,7 +12,7 @@ var express = require('express'),
 	_ = require('underscore')._,
 	MongoStore = require('connect-mongo')(express),
 
-	port = process.env.PORT || 5000,
+	port = process.env.PORT || 2300,
 
 	models = require(__dirname+'/lib/models'),
 	controls = require(__dirname+'/lib/controls')(models),
