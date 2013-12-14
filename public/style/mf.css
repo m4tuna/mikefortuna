@@ -136,6 +136,7 @@ background-color:#f35f5f;
 }
 .main-pic { border-radius:30px; height:300px; margin:-200px 0 -40px 0; }
 .next.great { box-shadow:none; position:absolute; right:10%; bottom:25%; background-color:transparent; }
+.next.great.bunny { bottom:20%; }
 .next.great img { border:none !important; }
 .modal-title { font-size:25px;}
 .modal-body { max-height:100%; text-align:center;}
@@ -169,10 +170,10 @@ outline: none;
 .header .email:hover { color:#fff; }
 .story { height: 990px; padding: 0; margin: 0; width: 100%; max-width: 1920px; position: relative; margin: 0 auto; border-top: 1px solid rgba(255,255,255,0.3); border-bottom: 1px solid rgba(0,0,0,0.4); }
 
-#first { background: #5fbaf3  no-repeat fixed; }
-#second { background: #aff35f no-repeat fixed;  }
-#fourth { background: #f3a85f no-repeat fixed;  }
-#third { background: #c52727 no-repeat fixed;  }
+#first { background: #27b4c5  no-repeat fixed; }
+#second { background: #B4B4B4 no-repeat fixed;  }
+#fourth { background: #FFFFFF no-repeat fixed;  }
+#third { background: #530000 no-repeat fixed;  }
 #theend { background: #27b4c5 bottom no-repeat fixed;  }
 
 /* Introduction */
