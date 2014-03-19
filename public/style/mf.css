@@ -184,8 +184,8 @@ border: 2px solid #fff;
 #first { background: url(/images/debut_light.png) ; }
 #second { background: url(/images/wavegrid.png);  }
 #fourth { background: url(/images/debut_light.png);  }
-#third { background: url(/images/wavegrid.png);  }
-#theend { background: url(/images/debut_light.png); height:200px;  }
+#third { background: url(/images/debut_light.png);  }
+#theend { background: url(/images/wavegrid.png); height:200px;  }
 #theend h2 { font-size:35px;}
 
 .btn-mf {
