@@ -24,7 +24,7 @@ a { font-family:Helvetica, serif; }
 #third h2, #third p { color:#2B2B2B; }
 .bg4 h2, .bg4 p, .bg4 h2, .bg4 p { color:#000; }
 
-.contain { margin: 160px 0px 10px 100px; width: 82%; }
+.contain { margin: 130px 0px 10px 100px; width: 82%; }
 #second .contain { margin: 150px 0 10px 100px; }
 #third .contain { margin: 90px 0 10px 100px; }
 #fourth .contain { margin: 230px 0 10px 100px; }
@@ -175,7 +175,7 @@ border-radius: 220px;
 background-size: cover;
 border: 2px solid #fff;
 }
-.header { background: #fff; position: fixed; z-index: 9999; width: 100%; padding:10px 0; border-bottom:2px solid #1fbba6;}
+.header { background: #fff; position: fixed; z-index: 9999; width: 100%; padding:2px 0; border-bottom:2px solid #1fbba6;}
 .home-logo { background:url(/img/logo.png); height:40px; width:82px; margin:0 40px;}
 .header .email { color:#000; font-size:20px; margin:12px 5px;}
 .header .email:hover { color:#fff; }
@@ -199,6 +199,8 @@ margin-top: 20px;
 color: #fff;
 text-shadow: none;
 }
+
+.header a i:hover { color:#1fbba6;}
 .btn-mf:hover { background-color: #1fbba6; color:#000;}
 #third a { color:#000; font-size:45px; line-height:55px;}
 #third i { color:#ECF0F1; font-size:30px; margin-top:10px; margin-right:10px;}
