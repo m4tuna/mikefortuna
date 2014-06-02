@@ -173,7 +173,7 @@ margin: 0 auto;
 background-position: 0;
 border-radius: 220px;
 background-size: cover;
-border: 2px solid #fff;
+border: 4px solid #1fbba6;
 }
 .header { background: #fff; position: fixed; z-index: 9999; width: 100%; padding:2px 0; border-bottom:12px solid #1fbba6;}
 .home-logo { background:url(/img/logo.png); height:40px; width:82px; margin:0 40px;}
@@ -230,7 +230,14 @@ border:2px solid transparent;}
 #first article a { color: #BDC3C7 ; }
 #first article a { text-decoration: underline; }
 #first article a:hover { color: #fff; }
-#first h2 { font:900 90px/100px "Helvetica Neue", Helvetica, Arial, sans-serif; }
+#first h2 { font:900 90px/100px "Helvetica Neue", Helvetica, Arial, sans-serif; display: inline;
+position: relative; }
+#first h2:after {
+content: "hey, i'm mike";
+position: absolute;
+left: 6px;
+top: 10px;
+color: rgba(255,0,0,0.2); width:100%;}
 #first p { color: #BDC3C7 ; }
 
 /* Background Only */
@@ -238,6 +245,20 @@ border:2px solid transparent;}
 #second article { background: url(/images/grain.png) repeat #333; color: #fff; width: 445px; margin-left: 100px; padding: 10px 20px; text-shadow: 0 -1px 0 rgba(0,0,0,0.5); line-height: 1.5em; box-shadow: 0 0 25px rgba(0,0,0,0.3); border: 1px solid rgba(150,150,150,0.1); }
 #second article p { margin-bottom: 25px; }
 #second article a { color: #ff0;}
+
+#second h2 { position:relative; display:inline;}
+#second h2:after { content: "background";
+position: absolute;
+left: 4px;
+top: 4px;
+color: rgba(255,0,0,0.1); width:100%;}
+
+#third h2 { position:relative; display:inline;}
+#third h2:after { content: "recent work";
+position: absolute;
+left: 4px;
+top: 4px;
+color: rgba(255,0,0,0.1); width:100%;}
 
 .byebye h2 { color: #000; }
 
