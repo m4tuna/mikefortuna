@@ -47,6 +47,8 @@ article {
 /* Landscape phone to portrait tablet */
 @media (max-width: 767px) { 
 
+    h2:after { display:none;}
+
     body { padding-left:0;}
     h2 { font-size:40px !important; }
     p { font-size: 19px !important; line-height: 25px !important; }
