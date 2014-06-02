@@ -175,23 +175,24 @@ border-radius: 220px;
 background-size: cover;
 border: 2px solid #fff;
 }
-.header { background: #fff; position: fixed; z-index: 9999; width: 100%; padding:2px 0; border-bottom:2px solid #1fbba6;}
+.header { background: #fff; position: fixed; z-index: 9999; width: 100%; padding:2px 0; border-bottom:12px solid #1fbba6;}
 .home-logo { background:url(/img/logo.png); height:40px; width:82px; margin:0 40px;}
 .header .email { color:#000; font-size:20px; margin:12px 5px;}
 .header .email:hover { color:#fff; }
 .story { height: 990px; padding: 0; margin: 0; width: 100%; max-width: 1920px; position: relative; margin: 0 auto; border-top: 1px solid #323a45; border-bottom: 1px solid rgba(0,0,0,0.4); }
 
-#first { background: url(/images/debut_light.png) ; }
-#second { background: url(/images/wavegrid.png);  }
-#fourth { background: url(/images/debut_light.png);  }
-#third { background: url(/images/debut_light.png);  }
-#theend { background: url(/images/wavegrid.png); height:200px;  }
+#first { background: url(/images/geometry.png) ; }
+#second { background: #fff;  }
+#fourth { background: url(/images/geometry.png);  }
+#third { background: url(/images/geometry.png);  }
+#theend { background: #fff; height:200px;  }
 #theend h2 { font-size:35px;}
 
 .btn-mf {
+border:2px dashed #fff;
 background-image: none;
 background-color: #1fbba6;
-border: none;
+
 border-radius: 0px;
 font-size: 30px;
 padding: 20px 30px;
@@ -200,15 +201,27 @@ color: #fff;
 text-shadow: none;
 }
 
+a:hover { color:#1fbba6;}
+html::selection {
+  background: #1fbba6; /* Safari */
+  }
+html::-moz-selection {
+  background: #1fbba6; /* Firefox */
+}
+p::selection, h1::selection, h2::selection, h3::selection {
+    background: #1fbba6;
+}
+
 .header a i:hover { color:#1fbba6;}
 .btn-mf:hover { background-color: #1fbba6; color:#000;}
 #third a { color:#000; font-size:45px; line-height:55px;}
-#third i { color:#ECF0F1; font-size:30px; margin-top:10px; margin-right:10px;}
+.work-list i { color:#ECF0F1; font-size:30px; margin-top:10px; margin-right:10px;}
 #third li a {  display:inline-block;
    height: 100%;
-   width: 100%; }
+   width: 100%; 
+border:2px solid transparent;}
 #third li:hover { background:#1fbba6; }
-#third a:hover { color:#fff;}
+#third a:hover { color:#fff; border:2px dashed #fff;}
 
 /* Introduction */
 #first .smashinglogo { background: url(/images/smashing-logo.png) 50% 100px no-repeat fixed; min-height: 1000px; padding: 0; margin: 0; width: 100%; max-width: 1920px; position: relative; margin: 0 auto; }
