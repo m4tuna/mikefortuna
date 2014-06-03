@@ -47,6 +47,7 @@ app.configure(function(){
 		})
 	);
 
+
 	// parse request bodies (req.body)
 	app.use(express.bodyParser());
 
@@ -83,6 +84,7 @@ app.configure(function(){
 app.configure('development', function(){
   app.use(express.errorHandler({ dumpExceptions: true, showStack: true }));
 });
+
 
 // Production environment configuration, not really in use yet...
 app.configure('production', function(){
