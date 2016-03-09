@@ -44,6 +44,7 @@ a:focus {
   outline: thin dotted;
   outline: 5px auto -webkit-focus-ring-color;
   outline-offset: -2px; }
+
 a:hover, a:active {
   outline: 0; }
 
@@ -295,9 +296,28 @@ header {
       margin-top: 2em; } }
   header #logo-container {
     /* @include span-columns(6); */
-    /* @include display-box();
-    @include justify-content(space-around);
-    @include align-items(center); */
+    display: -webkit-box;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: box;
+    -webkit-box-pack: center;
+    -moz-box-pack: center;
+    box-pack: center;
+    -webkit-justify-content: space-around;
+    -moz-justify-content: space-around;
+    -ms-justify-content: space-around;
+    -o-justify-content: space-around;
+    justify-content: space-around;
+    -ms-flex-pack: center;
+    -webkit-box-align: center;
+    -moz-box-align: center;
+    box-align: center;
+    -webkit-align-items: center;
+    -moz-align-items: center;
+    -ms-align-items: center;
+    -o-align-items: center;
+    align-items: center;
+    -ms-flex-align: center;
     display: -webkit-box;
     display: -moz-box;
     display: box;
@@ -307,21 +327,12 @@ header {
     display: flex;
     -webkit-flex-flow: row wrap;
     -moz-flex-flow: row wrap;
-    flex-flow: row wrap;
-    -webkit-box-pack: center;
-    -moz-box-pack: center;
-    box-pack: center;
-    -webkit-justify-content: space-around;
-    -moz-justify-content: space-around;
-    -ms-justify-content: space-around;
-    -o-justify-content: space-around;
-    justify-content: space-around;
-    -ms-flex-pack: center; }
+    flex-flow: row wrap; }
     @media screen and (max-width: 540px) {
       header #logo-container {
         float: left;
         display: block;
-        margin-right: 7.4229703521%;
+        margin-right: 7.42297%;
         width: 100%; }
         header #logo-container:last-child {
           margin-right: 0; } }
@@ -333,6 +344,7 @@ header {
       -moz-order: 1;
       order: 1;
       -ms-flex-order: 1;
+      color: #e85151;
       padding-top: 0.5em;
       font-weight: bold;
       font-size: 48px;
@@ -361,21 +373,33 @@ header {
       color: #d11c1c;
       border-color: #d11c1c; }
   header nav {
-    text-align: right;
-    float: left;
-    display: block;
-    margin-right: 2.3576515979%;
-    width: 74.4105871005%; }
-    header nav:last-child {
-      margin-right: 0; }
+    text-align: center;
+    -webkit-box-pack: center;
+    -moz-box-pack: center;
+    box-pack: center;
+    -webkit-justify-content: space-around;
+    -moz-justify-content: space-around;
+    -ms-justify-content: space-around;
+    -o-justify-content: space-around;
+    justify-content: space-around;
+    -ms-flex-pack: center;
+    -webkit-box-align: center;
+    -moz-box-align: center;
+    box-align: center;
+    -webkit-align-items: center;
+    -moz-align-items: center;
+    -ms-align-items: center;
+    -o-align-items: center;
+    align-items: center;
+    -ms-flex-align: center; }
     @media screen and (max-width: 540px) {
       header nav {
         text-align: left;
         margin-top: 1em;
         float: left;
         display: block;
-        margin-right: 7.4229703521%;
-        width: 100%; }
+        margin-right: 7.42297%;
+        width: 19.43277%; }
         header nav:last-child {
           margin-right: 0; } }
     header nav ul {
@@ -401,7 +425,6 @@ header {
   max-width: 68em;
   margin-left: auto;
   margin-right: auto;
-  padding-bottom: 2em;
   opacity: 0;
   -webkit-transform: translateY(50px);
   -moz-transform: translateY(50px);
@@ -421,21 +444,16 @@ header {
   #content section.intro {
     max-width: 68em;
     margin-left: auto;
-    margin-right: auto;
-    margin-bottom: 5em; }
+    margin-right: auto; }
     #content section.intro:after {
       content: "";
       display: table;
       clear: both; }
-    @media screen and (max-width: 540px) {
-      #content section.intro {
-        margin-bottom: 1em; } }
     #content section.intro h1 {
       font-size: 8em;
       border-top: 2px solid #fff;
       letter-spacing: -0.05em;
-      margin-top: 1.2em;
-      margin-bottom: 1em; }
+      margin-top: 0.3em; }
       @media screen and (max-width: 540px) {
         #content section.intro h1 {
           font-size: 4em;
@@ -472,8 +490,8 @@ header {
     #content section.row .col, #content section.row .col-full {
       float: left;
       display: block;
-      margin-right: 2.3576515979%;
-      width: 48.821174201%;
+      margin-right: 2.35765%;
+      width: 48.82117%;
       border-top: 2px solid #ced9e0;
       padding-top: 1em;
       padding-bottom: 3em; }
@@ -483,14 +501,14 @@ header {
         #content section.row .col, #content section.row .col-full {
           float: left;
           display: block;
-          margin-right: 7.4229703521%;
+          margin-right: 7.42297%;
           width: 100%; }
           #content section.row .col:last-child, #content section.row .col-full:last-child {
             margin-right: 0; } }
     #content section.row .col-full {
       float: left;
       display: block;
-      margin-right: 2.3576515979%;
+      margin-right: 2.35765%;
       width: 100%; }
       #content section.row .col-full:last-child {
         margin-right: 0; }
@@ -498,7 +516,7 @@ header {
         #content section.row .col-full {
           float: left;
           display: block;
-          margin-right: 7.4229703521%;
+          margin-right: 7.42297%;
           width: 100%; }
           #content section.row .col-full:last-child {
             margin-right: 0; } }
@@ -547,20 +565,22 @@ a.photo-item {
     opacity: 1; }
   a.photo-item div.caption {
     position: absolute;
-    bottom: 7px;
+    bottom: 5px;
     right: 0;
     left: 0;
     text-align: center;
     padding: 25px 0 10px;
     opacity: 0;
-    background: #fff;
+    background: #e85151;
     -webkit-transition: all 0.1s ease-in-out;
     -moz-transition: all 0.1s ease-in-out;
     transition: all 0.1s ease-in-out; }
     a.photo-item div.caption p {
-      font-size: 14px; }
+      font-size: 14px;
+      color: #fff; }
     a.photo-item div.caption h2 {
-      font-size: 30px; }
+      font-size: 30px;
+      color: #fff; }
 
 .loaded header {
   -webkit-transform: none;
@@ -569,6 +589,7 @@ a.photo-item {
   -o-transform: none;
   transform: none;
   opacity: 1; }
+
 .loaded #content {
   -webkit-transform: none;
   -moz-transform: none;

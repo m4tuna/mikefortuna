@@ -39,13 +39,13 @@ header {
 		/* @include span-columns(6); */
 
 
-		/* @include display-box();
+		@include display-box();
 		@include justify-content(space-around);
-		@include align-items(center); */
+		@include align-items(center);
 
 		@include display(flex);
 		@include flex-flow(row wrap);
-		@include justify-content(space-around);
+		// @include justify-content(flex-start);
 
 		@include media($mobile) {
 			@include span-columns(4);
@@ -53,6 +53,7 @@ header {
 
 		#logo {
 			@include order(1);
+			color:$base-accent-color;
 			padding-top: 0.5em;
 			font-weight: bold;
 			font-size: 48px;
@@ -87,13 +88,15 @@ header {
 
 	nav {
 
-		text-align: right;
-		@include span-columns(9);
+		text-align: center;
+		// @include span-columns(1);
+		@include justify-content(space-around);
+		@include align-items(center);
 
 		@include media($mobile) {
 			text-align: left;
 			margin-top: 1em;
-			@include span-columns(4);
+			@include span-columns(1);
 		}
 		ul {
 
@@ -129,7 +132,7 @@ header {
 #content {
 
 	@include outer-container;
-	padding-bottom: 2em;
+	// padding-bottom: 2em;
 
 	opacity: 0;
 	@include transform(translateY(50px));
@@ -139,18 +142,18 @@ header {
 	section.intro {
 
 		@include outer-container;
-		margin-bottom: 5em;
+		// margin-bottom: 5em;
 
 		@include media($mobile) {
-			margin-bottom: 1em;
+			// margin-bottom: 1em;
 		}
 
 		h1 {
 			font-size: 8em;
 			border-top: $heading-border;
 			letter-spacing: -0.05em;
-			margin-top: 1.2em;
-			margin-bottom: 1em;
+			margin-top: 0.3em;
+			// margin-bottom: 1em;
 
 			@include media($mobile) {
 				font-size: 4em;
@@ -257,19 +260,21 @@ a.photo-item {
 	}
 	div.caption {
 		position:absolute;
-		bottom: 7px;
+		bottom: 5px;
 		right: 0;
 		left: 0;
 		text-align: center;
 		padding:25px 0 10px;
 		opacity:0;
-		background:#fff;
+		background:$base-accent-color;
 		@include transition(all 0.1s ease-in-out);
 		p {
 			font-size:14px;
+			color:#fff;
 		}
 		h2 {
 			font-size:30px;
+			color:#fff;
 		}
 	}
 }
