@@ -6,13 +6,26 @@
 @import "typography";
 
 body {
+	// background-image:url('../img/bg.jpg');
+	// background-image:url('http://eskipaper.com/images/high-resolution-space-wallpaper-1.jpg');
+	background-image:url('../img/bg2.jpg');
+	// background-size: cover;
+	background-attachment: fixed;
+	background-position:top left;
+	background-blend-mode: overlay;
+}
+
+.page-bg {
 	padding-left: 1em;
 	padding-right: 1em;
 }
 
 a {
 	border-bottom: 1px solid $base-font-color;
+}
 
+h1, h2, h3, h4 {
+	// color:$base-accent-color;
 }
 
 a:hover {

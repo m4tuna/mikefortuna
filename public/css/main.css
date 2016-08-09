@@ -260,6 +260,12 @@ cite {
     content: "\2014 \00A0"; }
 
 body {
+  background-image: url("../img/bg2.jpg");
+  background-attachment: fixed;
+  background-position: top left;
+  background-blend-mode: overlay; }
+
+.page-bg {
   padding-left: 1em;
   padding-right: 1em; }
 
