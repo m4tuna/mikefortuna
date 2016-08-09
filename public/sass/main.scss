@@ -4,12 +4,13 @@
 @import "neat/neat";
 @import "grid-settings";
 @import "typography";
+@import "helpers";
 
 body {
 	// background-image:url('../img/bg.jpg');
 	// background-image:url('http://eskipaper.com/images/high-resolution-space-wallpaper-1.jpg');
 	background-image:url('../img/bg2.jpg');
-	// background-size: cover;
+	background-size: cover;
 	background-attachment: fixed;
 	background-position:top left;
 	background-blend-mode: overlay;
@@ -187,6 +188,7 @@ header {
 			font-size: 2.0em;
 			line-height: 1.5em;
 			letter-spacing: 0.02em;
+			margin-bottom: 0;
 		}
 	}
 
@@ -240,9 +242,12 @@ header {
 			text-align: center;
 			margin: 0 auto;
 			display: block;
-			&:last-child {
-				margin-bottom: 20px;
-			}
+			font-size:20px;
+			margin-bottom: 20px;
+			margin-top: 10px;
+			padding: 10px 0;
+			width: 100%;
+
 			@include transition(all 0.5s ease-in-out);
 			&:hover {
 				background:$base-accent-color;
@@ -274,7 +279,7 @@ header {
 			}
 
 			.col-2 {
-				width: 49%; width: calc(50% - 7px);
+				width: 100%;
 			}
 		}
 	}
@@ -282,6 +287,10 @@ header {
 
 a.photo-item {
 	position:relative;
+	&.fluidbox {
+		margin:0;
+		padding:0;
+	}
 	&:hover {
 		div.caption {
 			opacity:1;

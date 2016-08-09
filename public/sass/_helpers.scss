@@ -67,3 +67,12 @@
 %hidden {
   display: none;
 }
+
+.align-center,
+%align-center {
+  @include display(flex);
+  @include flex-flow(column);
+  @include justify-content(center);
+  @include align-items(center);
+  @include align-content(center);
+}

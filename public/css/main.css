@@ -259,8 +259,92 @@ cite {
   cite:before {
     content: "\2014 \00A0"; }
 
+/**
+--------------------------------------------------------
+
+ Custom Helpers
+
+-----------------------------------------------------  */
+.color-light {
+  color: #fff; }
+  .color-light a,
+  .color-light span,
+  .color-light div {
+    color: #fff; }
+
+.active {
+  font-weight: inherit;
+  font-color: inherit; }
+
+.bold,
+.strong {
+  font-weight: bold; }
+
+.italicized,
+.italic {
+  font-style: italic; }
+
+.uppercase {
+  text-transform: uppercase; }
+
+.capitalize {
+  text-transform: capitalize; }
+
+.full-width {
+  width: 100%;
+  margin: 5px auto 0; }
+  .full-width a,
+  .full-width span,
+  .full-width div {
+    width: 100%; }
+
+.hide-label .label,
+.hide-label label {
+  display: none; }
+
+.noscroll {
+  overflow: hidden; }
+
+.hidden {
+  display: none; }
+
+.align-center {
+  display: -webkit-box;
+  display: -moz-box;
+  display: box;
+  display: -webkit-flex;
+  display: -moz-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-flow: column;
+  -moz-flex-flow: column;
+  flex-flow: column;
+  -webkit-box-pack: center;
+  -moz-box-pack: center;
+  box-pack: center;
+  -webkit-justify-content: center;
+  -moz-justify-content: center;
+  -ms-justify-content: center;
+  -o-justify-content: center;
+  justify-content: center;
+  -ms-flex-pack: center;
+  -webkit-box-align: center;
+  -moz-box-align: center;
+  box-align: center;
+  -webkit-align-items: center;
+  -moz-align-items: center;
+  -ms-align-items: center;
+  -o-align-items: center;
+  align-items: center;
+  -ms-flex-align: center;
+  -webkit-align-content: center;
+  -moz-align-content: center;
+  align-content: center;
+  -ms-flex-line-pack: center; }
+
 body {
   background-image: url("../img/bg2.jpg");
+  background-size: cover;
   background-attachment: fixed;
   background-position: top left;
   background-blend-mode: overlay; }
@@ -473,7 +557,8 @@ header {
     #content section.intro p {
       font-size: 2.0em;
       line-height: 1.5em;
-      letter-spacing: 0.02em; }
+      letter-spacing: 0.02em;
+      margin-bottom: 0; }
   #content section.row {
     max-width: 68em;
     margin-left: auto;
@@ -552,11 +637,14 @@ header {
       text-align: center;
       margin: 0 auto;
       display: block;
+      font-size: 20px;
+      margin-bottom: 20px;
+      margin-top: 10px;
+      padding: 10px 0;
+      width: 100%;
       -webkit-transition: all 0.5s ease-in-out;
       -moz-transition: all 0.5s ease-in-out;
       transition: all 0.5s ease-in-out; }
-      #content .photo-grid .item-link:last-child {
-        margin-bottom: 20px; }
       #content .photo-grid .item-link:hover {
         background: #e85151;
         color: #fff; }
@@ -576,11 +664,13 @@ header {
       #content .photo-grid a {
         margin-bottom: 10px; }
       #content .photo-grid .col-2 {
-        width: 49%;
-        width: calc(50% - 7px); } }
+        width: 100%; } }
 
 a.photo-item {
   position: relative; }
+  a.photo-item.fluidbox {
+    margin: 0;
+    padding: 0; }
   a.photo-item:hover div.caption {
     opacity: 1; }
   a.photo-item div.caption {

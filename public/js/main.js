@@ -36,7 +36,7 @@ $(document).ready(function() {
 		// console.log($(window).scrollTop());
 		// moveHeader();
 
-		$('.bg_scroll').css('background-position', 0 -0.023*$(window).scrollTop());
+		// $('.bg_scroll').css('background-position', 0 -0.023*$(window).scrollTop());
 
 	});
 
