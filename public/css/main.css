@@ -1684,12 +1684,14 @@ a:hover {
 h1, h2, p {
   user-select: none; }
 
-.photo a {
+.photo .item-link {
   width: 100%;
   display: block;
   text-align: center;
   margin: 0.5em 0 1em;
-  padding: 0.5em 0; }
+  padding: 0.5em 0 1em; }
+  .photo .item-link:hover {
+    color: #fefefe; }
 
 h2 {
   text-transform: uppercase;
