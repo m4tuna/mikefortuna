@@ -1,3 +1,10 @@
+@charset 'utf-8';
+@import '../../node_modules/foundation-sites/scss/foundation';
+@include foundation-grid;
+@include foundation-flex-classes;
+@include foundation-flex-grid;
+
+
 @import "reset";
 @import "config";
 @import "bourbon/bourbon";
@@ -6,33 +13,56 @@
 @import "typography";
 @import "helpers";
 
-body {
-	// background-image:url('../img/bg.jpg');
-	// background-image:url('http://eskipaper.com/images/high-resolution-space-wallpaper-1.jpg');
-	background-image:url('../img/bg2.jpg');
-	background-size: cover;
-	background-attachment: fixed;
-	background-position:top left;
-	background-blend-mode: overlay;
-}
 
+
+$base-margin:2em;
 .page-bg {
 	padding-left: 1em;
 	padding-right: 1em;
 }
 
-a {
-	border-bottom: 1px solid $base-font-color;
-}
 
-h1, h2, h3, h4 {
-	// color:$base-accent-color;
+
+
+a {
+	color: $base-logo-link-color;
+	text-decoration: none;
+	border-bottom: 1px solid $base-font-color;
+
+	&:hover {
+		color: $base-logo-hover-link-color;
+		border-color: $base-logo-hover-link-color;
+	}
+
+	&:active, &:focus {
+		color: $base-logo-hover-link-color;
+		border-color: $base-logo-hover-link-color;
+	}
+}
+.margin-top {
+	margin-top:$base-margin;
 }
 
 a:hover {
 	color: $base-accent-color;
 }
+h1, h2, p {
+	user-select: none;
+}
 
+h2 {
+	text-transform: uppercase;
+	font-weight: bold;
+	color: $base-accent-color;
+	margin-bottom: 0.05em;
+}
+
+h2 a {
+	margin:0 0.3em;
+	&:hover {
+		color:#21ab27;
+	}
+}
 header {
 
 	@include outer-container;
@@ -65,40 +95,9 @@ header {
 			@include span-columns(4);
 		}
 
-		#logo {
-			@include order(1);
-			color:$base-accent-color;
-			padding-top: 0.5em;
-			font-weight: bold;
-			font-size: 48px;
-			line-height: 60px;
-			letter-spacing: -0.05em;
-			float: none;
-		}
 
-		#subtitle {
-			@include order(3);
-			color: $base-accent-color;
-			font-weight: bold;
-			font-size: 18px;
-		}
 	}
 
-	a {
-		color: $base-logo-link-color;
-		text-decoration: none;
-		border: none;
-
-		&:hover {
-			color: $base-logo-hover-link-color;
-			border-color: $base-logo-hover-link-color;
-		}
-
-		&:active, &:focus {
-			color: $base-logo-hover-link-color;
-			border-color: $base-logo-hover-link-color;
-		}
-	}
 
 	nav {
 
@@ -155,7 +154,12 @@ header {
 
 	section.intro {
 
-		@include outer-container;
+		@include display(flex);
+		@include flex-flow(column wrap);
+		@include justify-content(center);
+		@include align-content(center);
+		@include align-items(center);
+
 		// margin-bottom: 5em;
 
 		@include media($mobile) {
@@ -164,7 +168,7 @@ header {
 
 		h1 {
 			font-size: 8em;
-			border-top: $heading-border;
+			/* border-top: $heading-border; */
 			letter-spacing: -0.05em;
 			margin-top: 0.1em;
 			// margin-bottom: 1em;
@@ -189,6 +193,7 @@ header {
 			line-height: 1.5em;
 			letter-spacing: 0.02em;
 			margin-bottom: 0;
+			text-align: center;
 		}
 	}
 
@@ -197,13 +202,7 @@ header {
 		@include outer-container;
 		padding-top: 2em;
 		padding-bottom: 5em;
-		h2 {
-			text-transform: uppercase;
-			font-size: 1.0em;
-			font-weight: bold;
-			color: $base-accent-color;
-			margin-bottom: 0.05em;
-		}
+
 
 		p {
 			font-size: 1.2em;

@@ -4,6 +4,7 @@
   "description": "Portfolio",
   "main": "gulpfile.js",
   "dependencies": {
+    "foundation-sites": "^6.2.4",
     "mime": "~1.2.7"
   },
   "devDependencies": {

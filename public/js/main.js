@@ -2,13 +2,52 @@ $(document).ready(function() {
 
 	$("body").addClass("loaded");
 
-	var wordSwap = function() {
-		var words = Array('a creative web developer','a unicorn','a cool guy','a front end developer', 'a drummer, snowboarder and a web developer', 'not a cat', "wondering how many times you'll hit refresh to see how many alternate first sentences exist", "not the creator of this amazing background image - that would be the incredible: <a target='_blank' href='https://unsplash.com/@albertorestifo'>Alberto Restifo</a>");
+	function wordSwap() {
+		var words = Array(
+			 'a creative web developer',
+			 'a unicorn',
+			 'a UX developer',
+			 'a UI developer',
+			 'a front end developer',
+			 'a developer',
+			 'a developer',
+			 'a drummer, snowboarder and web developer',
+			 'a drummer, snowboarder and web developer',
+			 'a drummer, snowboarder and web developer',
+			 'not a cat',
+			 "secretely counting how many times you have clicked to see a new sentence"
+		);
 		var word = words[Math.floor(Math.random()*words.length)];
-		$('#word').append(word);
-	};
+		$('#word').text(word);
+	}
 
-	wordSwap();
+
+	function setIntroHeight() {
+		var wH = $( window ).height();
+		$('.intro').css('height', wH);
+	}
+
+
+
+
+
+	var word = 'a drummer, snowboarder and web developer';
+	$('#word').text(word);
+
+	$('#intro').click(function(){
+		wordSwap();
+		$('#counter').html(function(i, val) {
+			$.ajax({
+				url: '#',
+				type: 'POST',
+				data: {increment: true},
+				success: function() { console.log('top intro clicked') }
+			});
+			return +val+1;
+		});
+	});
+
+	setIntroHeight();
 
 
 	$(function() {
@@ -27,6 +66,12 @@ $(document).ready(function() {
 			transform: "translate3d(0, " + scrollTotal + "px, 0px)"
 		})
 	};
+
+	$( window ).resize(function() {
+		setIntroHeight();
+
+		$('.intro').css('bottom', wH);
+	});
 
 
 	$(window).scroll(function(){
