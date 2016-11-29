@@ -1684,6 +1684,13 @@ a:hover {
 h1, h2, p {
   user-select: none; }
 
+.photo a {
+  width: 100%;
+  display: block;
+  text-align: center;
+  margin: 0.5em 0 1em;
+  padding: 0.5em 0; }
+
 h2 {
   text-transform: uppercase;
   font-weight: bold;
