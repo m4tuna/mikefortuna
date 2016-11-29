@@ -50,10 +50,6 @@ $(document).ready(function() {
 	setIntroHeight();
 
 
-	$(function() {
-		$('a[rel="lightbox"]').fluidbox();
-	});
-
 
 
 	var moveHeader = function() {
