@@ -1,0 +1,209 @@
+//-------------------------------------------------------------------------------------------
+// Grid Generation
+//-------------------------------------------------------------------------------------------
+
+@import './sizing';
+
+$breakpoints: (
+  xsmall : 0,
+  small  :  375px,
+  medium :  768px,
+  large  : 1280px,
+  xlarge : 1440px,
+) !default;
+
+@mixin generate-grid(
+  $max-width: 1184px,
+  $grid-columns: 12,
+  $container-class: 'container',
+  $row-class: 'row',
+  $column-class: 'column',
+  $gutter: 10px) {
+  // Create the container with max width
+  .#{$container-class} {
+    max-width: $max-width;
+    margin: 0 auto;
+    &--fluid {
+      margin: 0;
+      max-width: 100%;
+    }
+  }
+
+  // Create the row
+  .#{$row-class} {
+    display: flex;
+    flex-wrap: wrap;
+    &.collapse>.#{$column-class} {
+      padding: 0;
+    }
+    &.align {
+      &-center {
+        justify-content: center;
+        &-vertical {
+          align-items: center;
+        }
+      }
+      &-right {
+        justify-content: flex-end;
+      }
+      &-left {
+        justify-content: flex-start;
+      }
+    }
+  }
+
+  // Columns
+  .#{$column-class} {
+    flex-grow: 1;
+    padding: $gutter / 2;
+    flex-basis: (100 / $grid-columns ) * 1%;
+    &.shrink {
+      flex: 0 0 auto;
+      max-width: 100%;
+    }
+    &.align {
+      &-center {
+        text-align: center;
+        &-vertical {
+          align-items: center;
+        }
+      }
+      &-right {
+        text-align: right;
+      }
+      &-left {
+        text-align: left;
+      }
+    }
+  }
+  @each $modifier, $breakpoint in $breakpoints {
+    @include respond-from($modifier) {
+      @for $i from 1 through $grid-columns {
+        // Columns
+        .#{$modifier}-#{$i} {
+          flex-grow: 1;
+          flex-basis: (100 / ($grid-columns / $i) ) * 1%;
+          max-width: (100 / ($grid-columns / $i) ) * 1%;
+          padding-left: $gutter / 2;
+          padding-right: $gutter / 2;
+        }
+        .#{$modifier}-offset-#{$i} {
+          margin-left: (100 / ($grid-columns / $i) ) * 1%;
+        }
+      }
+      // Grid Utils
+      .#{$modifier}-up-offset-0 {
+        margin-left: 0;
+      }
+      .hide-#{$modifier}-up {
+        display: none;
+      }
+      .#{$modifier}-align {
+        &-center {
+          text-align: center;
+        }
+        &-right {
+          text-align: right;
+        }
+        &-left {
+          text-align: left;
+        }
+      }
+    }
+    @include respond-to($modifier) {
+      .hide-#{$modifier}-down {
+        display: none;
+      }
+      .#{$modifier}-down-offset-0 {
+        margin-left: 0;
+      }
+    }
+  }
+}
+
+// Breakpoints
+// ------------------------------------------------------------------------------------------
+@mixin respond-to($breakpoint) {
+  @if map-has-key($breakpoints, $breakpoint) {
+    @media (max-width: map-get($breakpoints, $breakpoint)) {
+      @content;
+    }
+  }
+  @else {
+    @warn "Unfortunately, no value could be retrieved from `#{$breakpoints}`. "
+        + "Please make sure it is defined in `$breakpoints` map.";
+  }
+}
+
+@mixin respond-from($breakpoint) {
+  @if map-has-key($breakpoints, $breakpoint) {
+    @media (min-width: map-get($breakpoints, $breakpoint)) {
+      @content;
+    }
+  }
+  @else {
+    @warn "Unfortunately, no value could be retrieved from `#{$breakpoints}`. "
+        + "Please make sure it is defined in `$breakpoints-down` map.";
+  }
+}
+
+
+// Spacer Classes
+// ------------------------------------------------------------------------------------------
+
+$spacer-sizes:(
+  none: 0,
+  small: $small,
+  small-2: $small-2,
+  small-3: $small-3,
+  small-4: $small-4,
+  small-5: $small-5,
+  medium: $medium,
+  medium-2: $medium-2,
+  medium-3: $medium-3,
+  medium-4: $medium-4,
+  medium-5: $medium-5,
+  large: $large,
+  large-2: $large-2,
+  large-3: $large-3,
+  large-4: $large-4,
+  large-5: $large-5,
+  huge: $huge,
+  huge-2: $huge-2,
+  huge-3: $huge-3,
+  huge-4: $huge-4,
+  huge-5: $huge-5,
+);
+$spacer-directions: top, left, right, bottom;
+$spacer-types: margin, padding;
+$breakpoint-labels: (xsmall, small, medium, large, xlarge);
+
+@mixin generate-spacer-classes() {
+  @each $size in $breakpoint-labels {
+    @include respond-from($size) {
+      .mf {
+        @each $spacer-size-key, $spacer-size in $spacer-sizes {
+          @each $spacer-direction in $spacer-directions {
+            @each $spacer-type in $spacer-types {
+              @if $size != 'small' {
+                &-#{$size}-spacer--#{$spacer-type}-#{$spacer-direction}-#{$spacer-size-key} {
+                  #{$spacer-type}-#{$spacer-direction}: $spacer-size;
+                }
+                &-#{$size}-spacer--#{$spacer-type}-#{$spacer-size-key} {
+                  #{$spacer-type}: $spacer-size;
+                }
+              } @else {
+                &-spacer--#{$spacer-type}-#{$spacer-direction}-#{$spacer-size-key} {
+                  #{$spacer-type}-#{$spacer-direction}: $spacer-size;
+                }
+                &-spacer--#{$spacer-type}-#{$spacer-size-key} {
+                  #{$spacer-type}: $spacer-size;
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
