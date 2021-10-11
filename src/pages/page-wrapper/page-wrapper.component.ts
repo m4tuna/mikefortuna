@@ -7,19 +7,20 @@ import { Component, Inject, OnInit } from '@angular/core';
   styleUrls: ['./page-wrapper.component.scss']
 })
 export class PageWrapperComponent implements OnInit {
-  dark = false;
+  public dark = false;
 
   constructor(@Inject(DOCUMENT) private document: Document) { }
 
   ngOnInit(): void {
+    this.flipIt();
   }
 
   public flipIt() {
     this.dark = !this.dark;
     if (this.dark) {
-      this.document.body.classList.add('dark');
-    } else {
       this.document.body.classList.remove('dark');
+    } else {
+      this.document.body.classList.add('dark');
     }
   }
 

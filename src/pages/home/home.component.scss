@@ -1,23 +1,6 @@
-$white: #fff;
-$black: #000;
 
-
-:root {
-    --text-base: $white;
-}
-
-h1, h2, h3, p {
-    color: $white;
-}
-
-.dark {
-    h1, h2, h3, p {
-        color: $black;
-    }    
-}
 
 h1 {
-    color: $white;
     font-size: 3.75rem;
     line-height: 1.2;
     span {
@@ -26,6 +9,10 @@ h1 {
 }
 
 
+.mat-slider {
+    width: 100%;
+}
+
 ul.cloud {
     list-style: none;
     padding-left: 0;
@@ -33,8 +20,8 @@ ul.cloud {
     flex-wrap: wrap;
     align-items: center;
     justify-content: center;
-    line-height: 2.75rem;
-    width: 420px;
+    line-height: 3.23rem;
+    width: 75%;
     margin: 0 auto;
   }
   
@@ -73,7 +60,7 @@ ul.cloud {
   }
   
   ul.cloud li:nth-child(2n+1) a { --color: rgb(25, 231, 25); }
-  ul.cloud li:nth-child(3n+1) a { --color: rgb(129, 252, 225); }
+  ul.cloud li:nth-child(3n+1) a { --color: rgb(245, 255, 157); }
   ul.cloud li:nth-child(4n+1) a { --color: #c38; }
   
   ul.cloud a:focus {
@@ -102,4 +89,13 @@ ul.cloud {
     ul.cloud * {
       transition: none !important;
     }
+  }
+
+
+  mat-grid-tile {
+    background: lightblue;
+  }
+  
+  .process-section {
+    min-height: 1150px;   
   }
