@@ -1,0 +1,49 @@
+@import './core/core';
+
+@include generate-grid();
+@include generate-spacer-classes();
+
+
+  // Colors
+  $bg-color: #b8f0c3;
+  $dot-color: #1bd844;
+
+  $dark-bg-color: #232b24;
+  $dark-dot-color: rgb(82, 87, 84);
+
+  $white: #fff;
+  $black: #000;
+
+  // Dimensions
+  $dot-size: 2px;
+  $dot-space: 22px;
+
+  html, body { height: 100%; }
+  body {
+      background:
+          linear-gradient(90deg, $bg-color ($dot-space - $dot-size), transparent 1%) center,
+          linear-gradient($bg-color ($dot-space - $dot-size), transparent 1%) center,
+          $dot-color;
+      background-size: $dot-space $dot-space;
+      margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif;
+      transition: all 1s ease-in;
+      &.dark { 
+          background:
+          linear-gradient(90deg, $dark-bg-color ($dot-space - $dot-size), transparent 1%) center,
+          linear-gradient($dark-bg-color ($dot-space - $dot-size), transparent 1%) center,
+          $dark-dot-color;
+          background-size: $dot-space $dot-space;
+      }
+      h1, h2, h3, p {
+        color: $black;
+    }
+    
+    &.dark {
+        h1, h2, h3, p {
+            color: $white;
+        }    
+    }
+  }
+
+  
+

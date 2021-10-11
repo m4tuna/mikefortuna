@@ -1,0 +1,127 @@
+<div class="container mf-spacer--padding-top-huge-4">
+    <div class="row">
+        <div class="column">
+            <h1 matRipple matRippleColor="accent"><span>Hi, I'm Mike</span>. A UX Engineer with focus on empowering creative designers and developers.
+            </h1>
+            <mat-chip-list aria-label="Fish selection">
+                <mat-chip color="primary" selected>Code</mat-chip>
+                <mat-chip color="accent" selected>Design</mat-chip>
+            </mat-chip-list>
+            <br>
+
+            <ul class="cloud mf-spacer--padding-top-huge-2" role="navigation" aria-label="Webdev word cloud" matRipple matRippleColor="accent">
+                <li><a href="#" data-weight="4">BEM</a></li>
+                <li><a href="#" data-weight="2">Redux</a></li>
+                <li><a href="#" data-weight="8">design systems</a></li>
+                <li><a href="#" data-weight="7">color</a></li>
+                <li><a href="#" data-weight="5">HTML</a></li>
+                <li><a href="#" data-weight="7">components</a></li>
+                <li><a href="#" data-weight="6">DX</a></li>
+                <li><a href="#" data-weight="4">API</a></li>
+                <li><a href="#" data-weight="5">CSSGrid</a></li>
+                <li><a href="#" data-weight="6">material</a></li>
+                <li><a href="#" data-weight="2">Rest</a></li>
+                <li><a href="#" data-weight="8">UX UI</a></li>
+                <li><a href="#" data-weight="9">Angular</a></li>
+                <li><a href="#" data-weight="6">typescript</a></li>
+                <li><a href="#" data-weight="7">ionic</a></li>
+                <li><a href="#" data-weight="3">Animation</a></li>
+                <li><a href="#" data-weight="7">type</a></li>
+                <li><a href="#" data-weight="9">SCSS</a></li>
+                <li><a href="#" data-weight="6">Flexbox</a></li>
+                <li><a href="#" data-weight="9">Atomic</a></li>
+                <li><a href="#" data-weight="2">RXJS</a></li>
+                <li><a href="#" data-weight="3">nodeJS</a></li>
+                <li><a href="#" data-weight="4">es6</a></li>
+              </ul>
+        </div>
+    </div>
+
+
+
+    <!-- <div class="row process-section expanded mf-spacer--padding-top-huge-4">
+        <div class="column small-12 mf-spacer--padding-top-huge-5 ">
+            <h1>process</h1>
+            <mat-slider #processSlider (change)="changeProcess($event)" thumbLabel min="1" max="7" step="1" value="1"></mat-slider>
+            <div *ngIf="processSlider.value === 1">
+                <h2>1. Empathize</h2>
+                <img width="100%" src="/assets/empathy.jpeg" alt="">
+            </div>
+            <div *ngIf="processSlider.value === 2">
+                <h2>2. Define</h2>
+                <img width="100%" src="/assets/define.jpeg" alt="">
+            </div>
+            <div *ngIf="processSlider.value === 3">
+                <h2>3. Ideate</h2>
+                <img width="100%" src="/assets/ideate.png" alt="">
+            </div>
+            <div *ngIf="processSlider.value === 4">
+                <h2>4. Prototype</h2>
+                <img width="100%" src="/assets/process.gif" alt="">
+            </div>
+            <div *ngIf="processSlider.value === 5">
+                <h2>5. Test</h2>
+                <img width="100%" src="/assets/test.png" alt="">
+            </div>
+            <div *ngIf="processSlider.value === 6">
+                <h2>6. Refine</h2>
+                <img width="100%" src="/assets/refine.png" alt="">
+            </div>
+            <div *ngIf="processSlider.value === 7">
+                <h2>7. Implement</h2>
+                <img width="100%" src="/assets/implement.png" alt="">
+            </div>
+        </div>
+
+        </div>
+        <div class="column small-12 mf-spacer--padding-top-huge-4">
+            <h1>workbench</h1>
+            <h2>Some of my favorite tools that I use to create</h2>
+            <div class="row">
+                <div class="column medium-4 small-12">
+                    <h2>Angular</h2>
+                    <img src="/assets/ng.png" alt="" width="100%" height="200px">
+                    <p><mat-chip color="primary" selected>Code</mat-chip></p>
+                </div>
+                <div class="column medium-4 small-12">
+                    <h2>Sass</h2>
+                    <img src="/assets/scss.png" alt="" width="100%" height="200px">
+                    <p> <mat-chip color="primary" selected>Code</mat-chip></p>
+                </div>
+                <div class="column medium-4 small-12">
+                    <h2>Figma</h2>
+                    <img src="/assets/figma.jpg" alt="" width="100%" height="200px">
+                    <p> <mat-chip color="accent" selected>Design</mat-chip></p>
+                </div>
+            </div>
+            <div class="row">
+                <div class="column medium-4 small-12">
+                    <h2>Angular</h2>
+                    <img src="/assets/ng.png" alt="" width="100%" height="200px">
+                    <p><mat-chip color="primary" selected>Code</mat-chip></p>
+                </div>
+                <div class="column medium-4 small-12">
+                    <h2>Sass</h2>
+                    <img src="/assets/scss.png" alt="" width="100%" height="200px">
+                    <p> <mat-chip color="primary" selected>Code</mat-chip></p>
+                </div>
+                <div class="column medium-4 small-12">
+                    <h2>Figma</h2>
+                    <img src="/assets/figma.jpg" alt="" width="100%" height="200px">
+                    <p> <mat-chip color="accent" selected>Design</mat-chip></p>
+                </div>
+            </div>
+        </div>
+
+        <div class="column small-12 mf-spacer--padding-top-huge-4">
+            <h1>projects</h1>
+            <mat-grid-list cols="2" rowHeight="2:1">
+                <mat-grid-tile>1</mat-grid-tile>
+                <mat-grid-tile>2</mat-grid-tile>
+                <mat-grid-tile>3</mat-grid-tile>
+                <mat-grid-tile>4</mat-grid-tile>
+              </mat-grid-list>
+        </div>
+    </div> -->
+
+
