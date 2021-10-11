@@ -1,23 +1,33 @@
 @import './core/core';
 
-
 @include generate-grid();
 @include generate-spacer-classes();
 
-// Colors
-$bg-color: #7577FA;
-$dot-color: #9192FB;
 
-// Dimensions
-$dot-size: 2px;
-$dot-space: 22px;
+  // Colors
+  $bg-color: #7577FA;
+  $dot-color: #9192FB;
 
-html, body { height: 100%; }
-body {
-	background:
-		linear-gradient(90deg, $bg-color ($dot-space - $dot-size), transparent 1%) center,
-		linear-gradient($bg-color ($dot-space - $dot-size), transparent 1%) center,
-		$dot-color;
-	background-size: $dot-space $dot-space;
-    margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif;
-}
+  $dark-bg-color: #232b24;
+  $dark-dot-color: rgb(82, 87, 84);
+
+  // Dimensions
+  $dot-size: 2px;
+  $dot-space: 22px;
+
+  html, body { height: 100%; }
+  body {
+      background:
+          linear-gradient(90deg, $bg-color ($dot-space - $dot-size), transparent 1%) center,
+          linear-gradient($bg-color ($dot-space - $dot-size), transparent 1%) center,
+          $dot-color;
+      background-size: $dot-space $dot-space;
+      margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif;
+      &.dark { 
+          background:
+          linear-gradient(90deg, $dark-bg-color ($dot-space - $dot-size), transparent 1%) center,
+          linear-gradient($dark-bg-color ($dot-space - $dot-size), transparent 1%) center,
+          $dark-dot-color;
+          background-size: $dot-space $dot-space;
+      }
+  }

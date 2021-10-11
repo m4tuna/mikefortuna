@@ -1,8 +1,17 @@
-<mat-toolbar color="primary">
-    <button mat-icon-button class="example-icon" aria-label="Example icon-button with menu icon">
-     <mat-icon>menu</mat-icon>
-   </button>
-   <span>m42</span>
+<mat-toolbar [color]="dark ? '#000' : 'primary'">
+    <div class="row" style="width: 100%;">
+        <div class="column">
+            <button mat-icon-button class="example-icon" aria-label="Example icon-button with menu icon">
+                <mat-icon>menu</mat-icon>
+              </button>
+              <span>m42</span>
+        </div>
+        <div class="column shrink align-right">
+            <button (click)="flipIt()" mat-icon-button class="example-icon" aria-label="Example icon-button with menu icon">
+                <mat-icon>lightbulb</mat-icon>
+              </button>
+        </div>
+    </div>
  </mat-toolbar>
 <router-outlet></router-outlet>
   
