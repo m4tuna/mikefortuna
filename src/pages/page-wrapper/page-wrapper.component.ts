@@ -24,4 +24,8 @@ export class PageWrapperComponent implements OnInit {
     }
   }
 
+  email() {
+    window.open('mailto:m4tuna@gmail.com?Subject=Contact+from+mikefortuna.com&Body=Hi+Mike,', '_blank');
+  }
+
 }
