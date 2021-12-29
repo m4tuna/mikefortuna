@@ -12,7 +12,7 @@ import { MatSliderModule } from '@angular/material/slider';
 import { MatSlideToggleModule } from '@angular/material/slide-toggle';
 // Material Navigation
 import { MatMenuModule } from '@angular/material/menu';
-import { MatSidenavModule } from '@angular/material/sidenav';
+import { MatDrawer, MatSidenavModule } from '@angular/material/sidenav';
 import { MatToolbarModule } from '@angular/material/toolbar';
 // Material Layout
 import { MatCardModule } from '@angular/material/card';
@@ -57,6 +57,7 @@ import { MatTableModule } from '@angular/material/table';
     // MatSlideToggleModule,
     // MatMenuModule,
     // MatSidenavModule,
+    MatSidenavModule,
     MatToolbarModule,
     // MatCardModule,
     // MatDividerModule,
@@ -94,6 +95,7 @@ import { MatTableModule } from '@angular/material/table';
     // MatSlideToggleModule,
     // MatMenuModule,
     // MatSidenavModule,
+    MatSidenavModule,
     MatToolbarModule,
     // MatCardModule,
     // MatDividerModule,

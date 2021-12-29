@@ -1,10 +1,13 @@
-
+@import '../../core/grid';
 
 h1 {
     font-size: 3.75rem;
     line-height: 1.2;
     span {
         font-weight: 900;
+    }
+    @include respond-to(medium) {
+      font-size: 2.75rem;
     }
 }
 
@@ -23,6 +26,10 @@ ul.cloud {
     line-height: 3.23rem;
     width: 75%;
     margin: 0 auto;
+    @include respond-to(medium) {
+      width: 90%;
+      padding-top: 10px;
+    }
   }
   
   ul.cloud a {
@@ -62,6 +69,7 @@ ul.cloud {
   ul.cloud li:nth-child(2n+1) a { --color: rgb(25, 231, 25); }
   ul.cloud li:nth-child(3n+1) a { --color: rgb(245, 255, 157); }
   ul.cloud li:nth-child(4n+1) a { --color: #c38; }
+
   
   ul.cloud a:focus {
     outline: 1px dashed;

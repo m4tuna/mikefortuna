@@ -1,8 +1,23 @@
+<mat-drawer-container class="example-container">
+    <mat-drawer #drawer class="example-sidenav" mode="side">
+      <p>Auto-resizing sidenav</p>
+      <p *ngIf="showFiller">Lorem, ipsum dolor sit amet consectetur.</p>
+    </mat-drawer>
+  
+    <div class="example-sidenav-content">
+      <button type="button" mat-button (click)="drawer.toggle()">
+        Toggle sidenav
+      </button>
+    </div>
+  
+  
+  
+
 <div>
-    <mat-toolbar [color]="dark ? 'primary' : 'dark-primary'">
+    <mat-toolbar [color]="dark ? 'dark-primary' : 'primary'">
         <div class="row" style="width: 100%;">
             <div class="column">
-                <button mat-icon-button class="example-icon" aria-label="Example icon-button with menu icon">
+                <button mat-icon-button class="example-icon" aria-label="Example icon-button with menu icon" (click)="showFiller = !showFiller">
                     <mat-icon>menu</mat-icon>
                 </button>
                 <!-- <span>m42</span> -->
@@ -17,7 +32,7 @@
             </div>
         </div>
     </mat-toolbar>
-    <div id="lamp" [class.dark]="dark">
+    <div id="lamp" [class.dark]="!dark">
         <div class="lamp"  style="transform:scale(2,2)">
         <div class="gonna-give-light"></div>
         </div>
@@ -72,3 +87,4 @@
             </div>
     </div>
 </div>
+</mat-drawer-container>
