@@ -76,8 +76,8 @@ import { MatTableModule } from '@angular/material/table';
     // MatRippleModule,
     MatBottomSheetModule,
     // MatDialogModule,
-    // MatSnackBarModule,
-    // MatTooltipModule,
+    MatSnackBarModule,
+    MatTooltipModule,
     // MatPaginatorModule,
     // MatSortModule,
     // MatTableModule
@@ -113,8 +113,8 @@ import { MatTableModule } from '@angular/material/table';
     // MatRippleModule,
     MatBottomSheetModule,
     // MatDialogModule,
-    // MatSnackBarModule,
-    // MatTooltipModule,
+    MatSnackBarModule,
+    MatTooltipModule,
     // MatPaginatorModule,
     // MatSortModule,
     // MatTableModule
