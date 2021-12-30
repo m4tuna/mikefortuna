@@ -1,5 +1,4 @@
 import { ChangeDetectorRef, Component, OnInit } from '@angular/core';
-
 @Component({
   selector: 'app-home',
   templateUrl: './home.component.html',
@@ -8,7 +7,8 @@ import { ChangeDetectorRef, Component, OnInit } from '@angular/core';
 export class HomeComponent implements OnInit {
   currentProcess = 1;
 
-  constructor(private changeDetectorRef: ChangeDetectorRef) { }
+
+  constructor(private changeDetectorRef: ChangeDetectorRef) {}
 
   ngOnInit(): void {
   }

@@ -2,10 +2,10 @@
 @import '../../core/grid';
 
 
-@include respond-from(small) {
-    body {
-        background: none !important;
-    }
+.page-container {
+    background: none;
+    color: initial;
+    height: 100%;
 }
 
 #lamp {

@@ -1,0 +1,12 @@
+@import '../../core/grid';
+
+h1 {
+  font-size: 3.75rem;
+  line-height: 1.2;
+  span {
+      font-weight: 900;
+  }
+  @include respond-to(medium) {
+    font-size: 2.75rem;
+  }
+}
