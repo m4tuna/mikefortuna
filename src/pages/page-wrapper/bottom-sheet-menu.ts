@@ -44,10 +44,12 @@ export class BottomSheetMenuComponent implements OnChanges {
     this.sizeValue = event.value;
     console.log(event.value);
     document.documentElement.style.setProperty(`--theme-size`, event.value + 'rem');
-    if (localStorage.getItem('size') === '1' || localStorage.getItem('size') === '5') {
-      this.document.body.classList.add('small-center');
-    } else {
-      this.document.body.classList.remove('small-center');
+    if (localStorage.getItem('size')) {
+      if (localStorage.getItem('size') === '1' || localStorage.getItem('size') === '5') {
+        this.document.body.classList.add('small-center');
+      } else {
+        this.document.body.classList.remove('small-center');
+      }
     }
     this.openSnackBar('Theme updated..');
   }
