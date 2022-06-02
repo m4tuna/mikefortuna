@@ -1,10 +1,14 @@
-
+@import '../../core/grid';
 
 h1 {
-    font-size: 3.75rem;
-    line-height: 1.2;
+    font-size: calc(var(--theme-size) * 1.45);
+    line-height: calc(var(--theme-size) * 1.45);
+    font-weight: calc(var(--theme-weight) * 100);
     span {
-        font-weight: 900;
+      font-weight: calc(var(--theme-weight) * 200);
+    }
+    @include respond-to(medium) {
+      font-size: 2.75rem;
     }
 }
 
@@ -21,8 +25,13 @@ ul.cloud {
     align-items: center;
     justify-content: center;
     line-height: 3.23rem;
-    width: 75%;
+    width: 85%;
     margin: 0 auto;
+    padding-top: calc(var(--theme-density) * 10);
+    @include respond-to(medium) {
+      width: 90%;
+      padding-top: calc(var(--theme-density) * 20);
+    }
   }
   
   ul.cloud a {
@@ -33,7 +42,8 @@ ul.cloud {
     --size: 4;
     --color: #a33;
     color: var(--color);
-    font-size: calc(var(--size) * 0.25rem + 0.5rem);
+    font-size: var(--size);
+    line-height: calc(var(--size) * 1.05);
     display: block;
     padding: 0.125rem 0.25rem;
     position: relative;
@@ -44,15 +54,15 @@ ul.cloud {
     */
   }
   
-  ul.cloud a[data-weight="1"] { --size: 1; }
-  ul.cloud a[data-weight="2"] { --size: 2; }
-  ul.cloud a[data-weight="3"] { --size: 3; }
-  ul.cloud a[data-weight="4"] { --size: 4; }
-  ul.cloud a[data-weight="5"] { --size: 6; }
-  ul.cloud a[data-weight="6"] { --size: 8; }
-  ul.cloud a[data-weight="7"] { --size: 10; }
-  ul.cloud a[data-weight="8"] { --size: 13; }
-  ul.cloud a[data-weight="9"] { --size: 16; }
+  ul.cloud a[data-weight="1"] { --size:  calc(var(--theme-size) * 0.30); }
+  ul.cloud a[data-weight="2"] { --size:  calc(var(--theme-size) * 0.40); }
+  ul.cloud a[data-weight="3"] { --size:  calc(var(--theme-size) * 0.55); }
+  ul.cloud a[data-weight="4"] { --size:  calc(var(--theme-size) * 0.70); }
+  ul.cloud a[data-weight="5"] { --size:  calc(var(--theme-size) * 1.05); }
+  ul.cloud a[data-weight="6"] { --size:  calc(var(--theme-size) * 1.10); }
+  ul.cloud a[data-weight="7"] { --size:  calc(var(--theme-size) * 1.20); }
+  ul.cloud a[data-weight="8"] { --size:  calc(var(--theme-size) * 1.30); }
+  ul.cloud a[data-weight="9"] { --size:  calc(var(--theme-size) * 1.40); }
   
   ul[data-show-value] a::after {
     content: " (" attr(data-weight) ")";
@@ -60,8 +70,9 @@ ul.cloud {
   }
   
   ul.cloud li:nth-child(2n+1) a { --color: rgb(25, 231, 25); }
-  ul.cloud li:nth-child(3n+1) a { --color: rgb(245, 255, 157); }
+  ul.cloud li:nth-child(3n+1) a { --color: rgb(164 164 164); }
   ul.cloud li:nth-child(4n+1) a { --color: #c38; }
+
   
   ul.cloud a:focus {
     outline: 1px dashed;

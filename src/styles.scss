@@ -5,8 +5,8 @@
 
 
   // Colors
-  $bg-color: #b8f0c3;
-  $dot-color: #1bd844;
+  $bg-color: #fff;
+  $dot-color: #1bd8444b;
 
   $dark-bg-color: #232b24;
   $dark-dot-color: rgb(82, 87, 84);
@@ -26,7 +26,6 @@
           $dot-color;
       background-size: $dot-space $dot-space;
       margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif;
-      transition: all 1s ease-in;
       &.dark { 
           background:
           linear-gradient(90deg, $dark-bg-color ($dot-space - $dot-size), transparent 1%) center,
@@ -43,7 +42,22 @@
             color: $white;
         }    
     }
+    &.small-center {
+        h1 {
+          text-align: center;
+        }
+      }
   }
 
   
 
+
+  @include respond-to(medium) {
+    #lamp, .bg {
+        display: none;
+    }
+    .container {
+        margin-top: 23px;
+        padding: 22px;
+    }
+}

@@ -1,3 +1,13 @@
+@use "sass:math";
+@import '../../core/grid';
+
+
+.page-container {
+    background: none;
+    color: initial;
+    height: 100%;
+}
+
 #lamp {
     position: absolute;
     z-index: -1;
@@ -23,7 +33,7 @@
         position: absolute;
     }
     &:before {
-        left: -1.65rem;
+        left: -1.71rem;
         bottom: -4rem;
         width: 4rem;
         height: 4rem;
@@ -35,10 +45,11 @@
             0px 8px 80px rgba(251, 255, 195, 0.6),
             0px 8px 120px rgba(251, 255, 195, 0.6);
     
-        transition: all .15s;
+        transition: all calc(var(--theme-speed) * .05s);
     }
 
 }
+
 .gonna-give-light,
 .gonna-give-light:before {
     position: absolute;
@@ -61,6 +72,11 @@
     border-radius: 50%;
     border: .2rem solid rgba(255, 255, 255, 0.05);
     box-shadow: 0px 0px 50px rgba(255, 255, 255, 0);
+}
+
+#lamp.dark .lamp {
+
+    display: none;
 }
 
 #lamp.dark .lamp:before {
@@ -168,32 +184,23 @@
     right: 5px;
 }
 
+.cloud,
+.cloud:before,
+.cloud:after {
+    position: absolute;
+    width: 70px;
+    height: 30px;
+    background: #fff;
+    -webkit-border-radius: 100px / 50px;
+    border-radius: 100px / 50px;
+}
+
+$time: var(--theme-speed);
 
 .cloud {
     bottom: 100px;
-    -webkit-animation: cloud 50s infinite linear;
-    animation: cloud 50s infinite linear;
-    &:before,
-    &:after {
-        position: absolute;
-        width: 70px;
-        height: 30px;
-        background: #fff;
-        -webkit-border-radius: 100px / 50px;
-        border-radius: 100px / 50px;
-    }
-
-    &:before {
-        content: '';
-        left: 50px;
-    }
-    
-    &:after {
-        content: '';
-        left: 25px;
-        top: -10px;
-    }
-    
+    animation: cloud $time infinite linear;
+    -webkit-animation: cloud $time infinite linear;
 }
 
 @-webkit-keyframes cloud {
@@ -217,21 +224,21 @@
     }
 }
 
+.cloud:before {
+    content: '';
+    left: 50px;
+}
+
+.cloud:after {
+    content: '';
+    left: 25px;
+    top: -10px;
+}
 
 .cloud-2 {
     bottom: 100px;
-    -webkit-animation: cloud2 50s infinite linear;
-    animation: cloud2 50s infinite linear;
-    &:before {
-        content: '';
-        right: 50px;
-    }
-    
-    &:after {
-        content: '';
-        right: 25px;
-        top: -10px;
-    }
+    animation: cloud2 $time infinite linear;
+    -webkit-animation: cloud2 $time infinite linear;
 }
 
 @-webkit-keyframes cloud2 {
@@ -252,6 +259,17 @@
     100% {
         right: 100%;
     }
+}
+
+.cloud-2:before {
+    content: '';
+    right: 50px;
+}
+
+.cloud-2:after {
+    content: '';
+    right: 25px;
+    top: -10px;
 }
 
 .bg {

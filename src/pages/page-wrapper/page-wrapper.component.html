@@ -1,30 +1,6 @@
-<div>
-    <mat-toolbar [color]="dark ? 'primary' : 'dark-primary'">
-        <div class="row" style="width: 100%;">
-            <div class="column">
-                <button mat-icon-button class="example-icon" aria-label="Example icon-button with menu icon">
-                    <mat-icon>menu</mat-icon>
-                </button>
-                <!-- <span>m42</span> -->
-            </div>
-            <div class="column shrink align-right">
-                <button (click)="email()" mat-icon-button class="example-icon" aria-label="Example icon-button with menu icon">
-                    <mat-icon>mail</mat-icon>
-                </button>
-                <button (click)="flipIt()" mat-icon-button class="example-icon" aria-label="Example icon-button with menu icon">
-                    <mat-icon>{{ dark ? 'dark_mode' : 'light_mode'}}</mat-icon>
-                </button>
-            </div>
-        </div>
-    </mat-toolbar>
-    <div id="lamp" [class.dark]="dark">
-        <div class="lamp"  style="transform:scale(2,2)">
-        <div class="gonna-give-light"></div>
-        </div>
-    </div>
-    <router-outlet></router-outlet>
+<mat-drawer-container class="page-container">
 
-    <div class="bg" [class.dark]="!dark">
+    <div class="bg" [class.dark]="dark">
         <div class="cloud"></div>
         <div class="mountain">
         <div class="mountain-top">
@@ -47,7 +23,7 @@
             <div class="mountain-cap-3"></div>
         </div>
         </div>
-        
+
         <div class="cloud cloud-2"></div>
         <div class="mountain mountain-2">
             <div class="mountain-top-2">
@@ -71,4 +47,38 @@
             </div>
             </div>
     </div>
+
+    <mat-drawer #drawer class="example-sidenav" mode="over">
+        <mat-nav-list>
+        <a mat-list-item [routerLink]="item.link" *ngFor="let item of fillerNav">{{item.name}}</a>
+      </mat-nav-list>
+    </mat-drawer>
+<div>
+    <mat-toolbar [color]="dark ? 'dark-primary' : 'primary'">
+        <div class="row" style="width: 100%;">
+            <div class="column">
+                <button mat-icon-button class="example-icon" aria-label="Example icon-button with menu icon" (click)="drawer.toggle()">
+                    <mat-icon>menu</mat-icon>
+                </button>
+                <!-- <span>m42</span> -->
+            </div>
+            <div class="column shrink align-right">
+                <button mat-icon-button (click)="openBottomSheet()">
+                    <mat-icon>settings</mat-icon>
+                </button>
+                <button (click)="email()" mat-icon-button class="example-icon" aria-label="Example icon-button with menu icon">
+                    <mat-icon>mail</mat-icon>
+                </button>
+            </div>
+        </div>
+    </mat-toolbar>
+    <div id="lamp" [class.dark]="!dark">
+        <div class="lamp"  style="transform:scale(2,2)">
+        <div class="gonna-give-light"></div>
+        </div>
+    </div>
+    <router-outlet></router-outlet>
+
+    
 </div>
+</mat-drawer-container>
