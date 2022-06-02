@@ -26,7 +26,6 @@
           $dot-color;
       background-size: $dot-space $dot-space;
       margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif;
-      transition: all 1s ease-in;
       &.dark { 
           background:
           linear-gradient(90deg, $dark-bg-color ($dot-space - $dot-size), transparent 1%) center,
@@ -43,6 +42,11 @@
             color: $white;
         }    
     }
+    &.small-center {
+        h1 {
+          text-align: center;
+        }
+      }
   }
 
   

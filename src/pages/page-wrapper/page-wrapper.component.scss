@@ -1,4 +1,4 @@
-
+@use "sass:math";
 @import '../../core/grid';
 
 
@@ -45,7 +45,7 @@
             0px 8px 80px rgba(251, 255, 195, 0.6),
             0px 8px 120px rgba(251, 255, 195, 0.6);
     
-        transition: all .15s;
+        transition: all calc(var(--theme-speed) * .05s);
     }
 
 }
@@ -72,6 +72,11 @@
     border-radius: 50%;
     border: .2rem solid rgba(255, 255, 255, 0.05);
     box-shadow: 0px 0px 50px rgba(255, 255, 255, 0);
+}
+
+#lamp.dark .lamp {
+
+    display: none;
 }
 
 #lamp.dark .lamp:before {
@@ -190,10 +195,12 @@
     border-radius: 100px / 50px;
 }
 
+$time: var(--theme-speed);
+
 .cloud {
     bottom: 100px;
-    -webkit-animation: cloud 50s infinite linear;
-    animation: cloud 50s infinite linear;
+    animation: cloud $time infinite linear;
+    -webkit-animation: cloud $time infinite linear;
 }
 
 @-webkit-keyframes cloud {
@@ -230,8 +237,8 @@
 
 .cloud-2 {
     bottom: 100px;
-    -webkit-animation: cloud2 50s infinite linear;
-    animation: cloud2 50s infinite linear;
+    animation: cloud2 $time infinite linear;
+    -webkit-animation: cloud2 $time infinite linear;
 }
 
 @-webkit-keyframes cloud2 {

@@ -1,5 +1,5 @@
 <mat-nav-list>
-    <div class="container">
+    <div class="container" style="background: var(--primary);">
         <div class="row">
             <div class="column mf-spacer--padding-left-small-3">
                 <h1>Settings</h1>
@@ -7,13 +7,8 @@
         </div>
     </div>
     <a mat-list-item>
-        <span mat-line>Lights</span>
+        <span mat-line>Dark Mode</span>
         <mat-slide-toggle [checked]="lightsValue === 'yeet'" (change)="toggleLights()"></mat-slide-toggle>
-    </a>
-
-    <a mat-list-item>
-        <span mat-line>Animation Speed: {{Speed.value}}</span>
-        <mat-slider (change)="setSpeed($event)" #Speed min="1" max="5" step="1" [value]="speedValue"></mat-slider>
     </a>
 
     <a mat-list-item>
@@ -22,9 +17,14 @@
     </a>
 
     <a mat-list-item>
+        <span mat-line>Animation Speed: {{Speed.value}}</span>
+        <mat-slider (change)="setSpeed($event)" #Speed min="10" max="50" step="15" [value]="speedValue"></mat-slider>
+    </a>
+
+    <!-- <a mat-list-item>
         <span mat-line>Scale: {{Scale.value}}</span>
         <mat-slider (change)="setScale($event)" #Scale min="1" max="5" step="1" [value]="scaleValue"></mat-slider>
-    </a>
+    </a> -->
 
     <a mat-list-item>
         <span mat-line>Density: {{Density.value}}</span>
@@ -33,6 +33,6 @@
 
     <a mat-list-item>
         <span mat-line>Weight: {{Weight.value}}</span>
-        <mat-slider (change)="setWeight($event)" #Weight min="1" max="5" step="1" [value]="weightValue"></mat-slider>
+        <mat-slider (change)="setWeight($event)" #Weight min="1" max="4" step="1" [value]="weightValue"></mat-slider>
     </a>
 </mat-nav-list>

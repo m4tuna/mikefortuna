@@ -1,23 +1,23 @@
-$small: 4px;
-$small-2: $small * 2;
-$small-3: $small * 3;
-$small-4: $small * 4;
-$small-5: $small * 5;
+$small: calc(var(--theme-density) * 1);
+$small-2: calc($small * 2);
+$small-3: calc($small * 3);
+$small-4: calc($small * 4);
+$small-5: calc($small * 5);
 
-$medium: 16px;
-$medium-2: $medium * 2;
-$medium-3: $medium * 3;
-$medium-4: $medium * 4;
-$medium-5: $medium * 5;
+$medium: calc(var(--theme-density) * 3);
+$medium-2:  calc($medium * 2);
+$medium-3:  calc($medium * 3);
+$medium-4:  calc($medium * 4);
+$medium-5:  calc($medium * 5);
 
-$large: 24px;
-$large-2: $large * 2;
-$large-3: $large * 3;
-$large-4: $large * 4;
-$large-5: $large * 5;
+$large:  calc(var(--theme-density) * 5);
+$large-2:  calc($large * 2);
+$large-3:  calc($large * 3);
+$large-4:  calc($large * 4);
+$large-5:  calc($large * 5);
 
-$huge: 48px;
-$huge-2: $huge * 2;
-$huge-3: $huge * 3;
-$huge-4: $huge * 4;
-$huge-5: $huge * 5;
+$huge:  calc(var(--theme-density) * 15);
+$huge-2:  calc($huge * 2);
+$huge-3:  calc($huge * 3);
+$huge-4:  calc($huge * 4);
+$huge-5:  calc($huge * 5);

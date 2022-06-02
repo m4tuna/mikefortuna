@@ -44,12 +44,12 @@ export const nav = [
     name: 'Home',
     link: '/'
   },
-  {
-    name: 'Color theory',
-    link: 'blog/1'
-  },
-  {
-    name: 'Theming with SCSS',
-    link: 'blog/2'
-  },
+  // {
+  //   name: 'Color theory',
+  //   link: 'blog/1'
+  // },
+  // {
+  //   name: 'Theming with SCSS',
+  //   link: 'blog/2'
+  // },
 ];
