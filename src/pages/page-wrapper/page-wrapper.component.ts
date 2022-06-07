@@ -19,7 +19,7 @@ export interface navItem {
 })
 export class PageWrapperComponent implements OnInit, OnChanges {
   public speedValue = localStorage.getItem('speed') || '3';
-  public sizeValue = localStorage.getItem('size') || '3';
+  public sizeValue = localStorage.getItem('size') || '2';
   public densityValue = localStorage.getItem('density') || '3';
   public weightValue = localStorage.getItem('weight') || '3';
   public lightsValue = localStorage.getItem('dark') || 'dark';
