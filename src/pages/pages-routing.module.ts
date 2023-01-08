@@ -1,6 +1,6 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import { BlogComponent } from './blog/blog.component';
+import { BlogPostComponent } from './blog-post/blog-post.component';
 
 import { PageWrapperComponent } from './page-wrapper/page-wrapper.component';
 
@@ -16,10 +16,14 @@ const pagesRoutes: Routes = [
       {
         path: 'blog',
         loadChildren: () => import('../pages/blog/blog.module').then(m => m.BlogModule),
+      },
+      {
+        path: 'blog/post',
+        loadChildren: () => import('./blog-post/blog-post.module').then(m => m.BlogPostModule),
         children: [
           {
           path:  ':id',
-          component:  BlogComponent,
+          component:  BlogPostComponent,
           data: {some_data: '1'}
           },
         ]

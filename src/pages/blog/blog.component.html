@@ -1,17 +1,12 @@
-<div class="container mf-spacer--padding-top-huge-4" *ngIf="currentPost as post">
+<div class="container blog-container mf-spacer--padding-top-huge-4" >
     <div class="row">
-        <div class="column">
-            <h1>{{ data[currentPost].name }}</h1>
-            <p>{{ data[currentPost].date }}</p>
+        <div class="column small-12">
+            <h1>Blog</h1>
         </div>
     </div>
-    <!-- <div class="row">
-        <div class="column">
-            <div *ngFor="let c of data[currentPost].content">
-                <h2>{{ c.content.title }}</h2>
-                <p>{{ c.content.paragraph }}</p>
-            </div>
+    <div class="row" *ngFor="let post of data">
+        <div class="column small-12">
+            <p><a [routerLink]="'/blog/post/' + post.id">{{ post.name }}, {{ post.date }}</a></p>
         </div>
-    </div> -->
+    </div>
 </div>
-

@@ -1,0 +1,26 @@
+<div *ngIf="currentPost as post">
+    <div class="container blog-container">
+        <div class="row">
+            <div class="column">
+                <a routerLink="/blog">back</a>
+            </div>
+        </div>
+    </div>
+<div class="container blog-container" >
+    <div class="row">
+        <div class="column">
+            <h1>{{ data[currentPost].name }}</h1>
+            <p>{{ data[currentPost].date }}</p>
+        </div>
+    </div>
+    <div class="row">
+        <div class="column">
+            <div *ngFor="let c of data[currentPost].content; index as i">
+                <h2>{{ c.title }}</h2>
+                <p>{{ c.paragraph }}</p>
+            </div>
+        </div>
+    </div>
+</div>
+
+</div>
